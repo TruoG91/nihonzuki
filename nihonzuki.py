@@ -762,7 +762,7 @@ def AddTracking(items):
 	'''
 
 	for item in items:
-		if "plugin.video.tranhuyhoang.playlist" in item["path"]:
+		if "plugin.video.nihonzuki" in item["path"]:
 			tmps = item["path"].split("?")
 			if len(tmps) == 1:
 				tail = ""
