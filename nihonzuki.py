@@ -25,8 +25,8 @@ addons_folder = xbmc.translatePath('special://home/addons')
 image = xbmc.translatePath(os.path.join(path, "icon.png"))
 
 plugin = Plugin()
-addon = xbmcaddon.Addon("plugin.video.nihonzuki")
-pluginrootpath = "plugin://plugin.video.nihonzuki"
+addon = xbmcaddon.Addon("plugin.video.nihonzuki.playlist")
+pluginrootpath = "plugin.video.nihonzuki.playlist"
 http = httplib2.Http(cache, disable_ssl_certificate_validation=True)
 query_url = "https://docs.google.com/spreadsheets/d/{sid}/gviz/tq?gid={gid}&headers=1&tq={tq}"
 sheet_headers = {
@@ -762,7 +762,7 @@ def AddTracking(items):
 	'''
 
 	for item in items:
-		if "plugin.video.nihonzuki" in item["path"]:
+		if "plugin.video.nihonzuki.playlist" in item["path"]:
 			tmps = item["path"].split("?")
 			if len(tmps) == 1:
 				tail = ""
