@@ -177,9 +177,9 @@ def getItems(url_path="0", tq="select A,B,C,D,E"):
 		if "plugin://" in item["path"]:
 			if "install-repo" in item["path"]:
 				item["is_playable"] = False
-			elif re.search("plugin.video.nihonzuki.playlist/(.+?)/.+?\://", item["path"]):
+			elif re.search("plugin.video.nihonzuki/(.+?)/.+?\://", item["path"]):
 				match = re.search(
-					"plugin.video.nihonzuki.playlist(/.+?/).+?\://", item["path"])
+					"plugin.video.nihonzuki(/.+?/).+?\://", item["path"])
 				tmp = item["path"].split(match.group(1))
 				tmp[-1] = urllib.quote_plus(tmp[-1])
 				item["path"] = match.group(1).join(tmp)
