@@ -1198,11 +1198,11 @@ def GA(title="Home", page="/"):
 		client_id = open(cid_path).read()
 		data = {
 			'v': '1',
-			'tid': 'UA-29985580-1',  # Thay GA id của bạn ở đây
+			'tid': 'UA-52209804-5',  # Thay GA id của bạn ở đây
 			'cid': client_id,
 			't': 'pageview',
-			'dp': "NihonzukiPlaylist%s" % page,
-			'dt': "[NihonzukiPlaylist] - %s" % title
+			'dp': "VNPlaylist%s" % page,
+			'dt': "[VNPlaylist] - %s" % title
 		}
 		http.request(
 			ga_url, "POST",
