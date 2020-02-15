@@ -1138,7 +1138,7 @@ def GetFShareCred():
 			dialog = xbmcgui.Dialog()
 			yes = dialog.yesno(
 				'Đăng nhập không thành công!\n',
-				'[COLOR yellow]Bạn cần nhập tài khoản VIP FShare để xem?Nếu chưa có tài khoản thì liên hệ qua**FB:tranhuyhoang HOẶC ZALO:0974 090 325 để đăng ký tài khoản VIP ngay bây giờ![/COLOR]',
+				'[COLOR yellow]Bạn cần nhập tài khoản VIP FShare để xem?Nếu chưa có tài khoản thì liên hệ qua**FB:nihonzuki để đăng ký tài khoản VIP ngay bây giờ![/COLOR]',
 				yeslabel='OK, nhập ngay',
 				nolabel='Bỏ qua'
 			)
@@ -1198,11 +1198,11 @@ def GA(title="Home", page="/"):
 		client_id = open(cid_path).read()
 		data = {
 			'v': '1',
-			'tid': 'UA-52209804-5',  # Thay GA id của bạn ở đây
+			'tid': 'UA-29985580-1',  # Thay GA id của bạn ở đây
 			'cid': client_id,
 			't': 'pageview',
-			'dp': "VNPlaylist%s" % page,
-			'dt': "[VNPlaylist] - %s" % title
+			'dp': "NihonzukiPlaylist%s" % page,
+			'dt': "[NihonzukiPlaylist] - %s" % title
 		}
 		http.request(
 			ga_url, "POST",
